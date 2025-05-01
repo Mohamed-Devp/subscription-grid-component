@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Shared styles */
+* {
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(179, 61%, 44%);
+    --light-cyan: hsl(179, 47%, 52%);
+    --yellow: hsl(71, 73%, 54%);
+
+    --gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    --primary-font: "Karla";
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: 180px 250px;
+    justify-content: center;
+    align-content: center;
+    width: 100vw; min-height: 100vh;
+    background-color: var(--gray);
+    font-family: var(--primary-font);
+}
+
+/* Offer section */
+.offer {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    border-radius: 8px 8px 0 0;
+    background-color: white;
+}
+
+.offer p:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-cyan);
+}
+
+.offer p:nth-child(2) {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.offer p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    width: 90%;
+    color: var(--grayish-blue);
+}
+
+/* Subscription section */
+.subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+    border-radius: 0 0 0 8px;
+    background-color: var(--dark-cyan);
+}
+
+.subscription > p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.price div {
+    display: flex;
+    align-items: center;
+}
+
+.price span:first-child {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.price span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--gray);
+    margin: 0 12px;
+}
+
+.price p {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    margin: 8px 0;
+}
+
+button {
+    width: 90%; height: 40px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--yellow);
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: opacity 0.25s ease-in;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+/* About us section */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:  2.5rem 2rem;
+    border-radius: 0 0 8px 0;
+    background-color: var(--light-cyan);
+}
+
+.about-us > p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.features {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--gray);
+    margin: 4px 0;
+    line-height: 160%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 20px 0;
+        grid-template-columns: 300px;
+        grid-template-rows: 260px 225px 220px;
+    }
+
+    .offer {
+        border-radius: 4px 4px 0 0;
+    }
+    
+    .subscription {
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+
+    .about-us {
+        padding: 1.5rem;
+        border-radius: 0 0 4px 4px;
+    }
+
+}
